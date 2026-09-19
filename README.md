@@ -4,12 +4,18 @@ An interactive 3D explainer for CUDA-style parallel execution. Adjust block size
 
 ![CUDA SimCity live preview](docs/media/demo.gif)
 
-The model is intentionally simplified and does not claim specifications or measured performance for any NVIDIA GPU.
+This is an independent educational preview, not GPU telemetry or a hardware benchmark. Published Ada limits inform a simplified per-SM capacity bound; register-allocation granularity and partition constraints are omitted. Kernel activity remains illustrative, and the city does not execute CUDA.
+
+The [benchmark roadmap](docs/benchmark-roadmap.md) separates implemented behavior from proposed features and records the verification limits.
 
 ## Development
 
 ```bash
-npm install
+npm ci
 npm run dev
+npm test
+npm run typecheck
+npx playwright install chromium
+npm run test:browser
 npm run build
 ```
