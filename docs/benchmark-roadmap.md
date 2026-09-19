@@ -1,7 +1,9 @@
-# CUDA SimCity: Benchmark and Iteration Draft
+# CUDA SimCity: Current Baseline and Upgrade Plan
 
-Status: draft, 2026-09-19. The browser/deployment improvements listed below are
-implemented; the remaining feature and model work is proposed.
+Reviewed 2026-09-19. Occupancy/precision lessons, source-linked architecture
+inspection, relative production assets, and persistent browser coverage are
+implemented. Allocation-rule fidelity, memory transactions, scheduling traces,
+and programming-model extensions below remain proposals.
 
 ## Reference Standard
 
@@ -23,12 +25,11 @@ These are quality references, not templates to copy wholesale.
   reduced-motion handling, step/reset, keyboard tabs, snapshot export, and a
   non-WebGL fallback. Allocation-granularity omissions are already stated in UI.
 - [Project commands](../package.json): typecheck, unit tests, build, and a
-  Playwright command. At the start of this pass that browser command discovered
-  zero tests; the new suite makes it executable coverage.
-- [README](../README.md): discloses a simplified model, but does not provide a
-  claim-by-claim source and simplification audit.
+  production Playwright suite with four retained tests.
+- [README](../README.md): describes current controls, model boundaries, and
+  verification scope. A claim-by-claim allocation-limit ledger remains proposed.
 
-## Landed In This Pass
+## Implemented Verification And Deployment
 
 - [Browser suite](../tests/app.spec.mjs) and [configuration](../playwright.config.ts):
   production build under a non-root path, desktop/mobile GPU and SM canvas
@@ -39,8 +40,9 @@ These are quality references, not templates to copy wholesale.
   original absolute `/assets/` references failed the subpath boot check; the
   same browser check passed after the fix.
 - [Pages workflow](../.github/workflows/pages.yml): installs Chromium and runs
-  the browser suite before uploading a deployment artifact. This workflow
-  change has been checked locally, not executed on GitHub in this pass.
+  the browser suite before uploading a deployment artifact. Deployment is
+  restricted to non-PR runs in the public repository; a workflow file alone
+  does not establish the current site's deployment status.
 
 ## Next Iteration: Verifiable Occupancy
 

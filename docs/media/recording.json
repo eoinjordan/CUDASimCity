@@ -1,0 +1,462 @@
+{
+  "schema": "simcities-recording/v2",
+  "kind": "illustrative-model-recording",
+  "folder": "CUDASimCity",
+  "frames": 24,
+  "playbackFramesPerSecond": 3,
+  "timing": "Edited model progression, not wall-clock hardware performance",
+  "gif": "demo.gif",
+  "gifSha256": "8c41501cc20d354836c13bea0ebba49d0f814ab1a22a7470af069014883a604c",
+  "desktop": [
+    1280,
+    800
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "changedCanvasPixels": 2349,
+  "pageErrors": 0,
+  "mobileOverflow": false,
+  "scenario": "GPU and SM views, register pressure reducing block capacity, an impossible launch with no active work, reset, TF32 storage, and the INT8 precision lab. No CUDA execution.",
+  "observations": [
+    {
+      "frame": 0,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "33%"
+        },
+        {
+          "id": "blocks",
+          "value": "2"
+        },
+        {
+          "id": "warps",
+          "value": "16/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "16 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "128"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "0%"
+        },
+        {
+          "id": "blocks",
+          "value": "0"
+        },
+        {
+          "id": "warps",
+          "value": "0/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "NO ACTIVE WORK"
+        },
+        {
+          "id": "resident-count",
+          "value": "0 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "1024"
+        },
+        {
+          "id": "registers",
+          "value": "128"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "0%"
+        },
+        {
+          "id": "blocks",
+          "value": "0"
+        },
+        {
+          "id": "warps",
+          "value": "0/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "NO ACTIVE WORK"
+        },
+        {
+          "id": "resident-count",
+          "value": "0 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "16KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "1024"
+        },
+        {
+          "id": "registers",
+          "value": "128"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "32KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "8KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "status": "PAUSED",
+      "metrics": [
+        {
+          "id": "occupancy",
+          "value": "100%"
+        },
+        {
+          "id": "blocks",
+          "value": "6"
+        },
+        {
+          "id": "warps",
+          "value": "48/ 48"
+        },
+        {
+          "id": "engine",
+          "value": "TENSOR MMA"
+        },
+        {
+          "id": "resident-count",
+          "value": "48 / 48"
+        },
+        {
+          "id": "tile-storage",
+          "value": "8KiB"
+        }
+      ],
+      "controls": [
+        {
+          "id": "labels",
+          "value": true
+        },
+        {
+          "id": "threads",
+          "value": "256"
+        },
+        {
+          "id": "registers",
+          "value": "32"
+        },
+        {
+          "id": "shared",
+          "value": "12"
+        }
+      ]
+    }
+  ],
+  "sourceCommit": "1d256f3a72bd68fc01f1747b627d7befd8d3da0c",
+  "sourceInputSha256": "523bb47964724b6ebcfefc61c159544b2d626b8d7bbc47e7684f794c326e9d43",
+  "buildIndexSha256": "667c05771d935d26c4469a1e919a23fe089e51e19841dad1954538455a062132",
+  "recorder": "tools/record-previews.mjs",
+  "recorderSha256": "4f8de6cdd0a0d24dd5bb65f7bf346699cc296ccf4f7907421a19190e427dddd1",
+  "recordedAt": "2026-09-19T21:36:21.764Z"
+}
