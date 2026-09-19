@@ -88,6 +88,42 @@ production-bundle browser test exercises the same controls as the model tests.
   sources, and profile-specific boundary fixtures. Do not make a new city solely
   to change SM counts or colors.
 
+## Video Alignment: Threads To Tiles
+
+Requested reference: Bug Labs, [Nvidia CUDA Explained in 6 Minutes](https://www.youtube.com/watch?v=yMNlAy6X4pg),
+published 2026-09-05. The title, creator, and expanded public description were
+checked on 2026-09-19. Playback/transcript retrieval did not succeed, so this is
+a comparison against the stated scope, not a verification of every video claim.
+
+The description centers on Tensor Cores, Triton, CUDA Tile, and the contrast with
+ROCm and TPU/XLA. The current city covers host/grid/block/warp/SM context, memory,
+explicit MMA selection, and storage formats, but it does not yet explain that
+programming-model evolution. It is therefore only partially aligned.
+
+Proposed next lesson:
+
+1. Start with a small matrix operation and its inputs/output, then distinguish
+  the mathematical tile from the CUDA thread block and physical execution units.
+2. Contrast thread-level CUDA, Triton's block/tile programming abstraction, and
+  CUDA Tile/cuTile. Keep compiler abstractions outside the silicon diagram.
+3. Show a declared mapping to supported matrix instructions and memory movement;
+  a tile-shaped program is not proof of Tensor Core execution or speedup.
+4. Keep toolkit, compiler, runtime, ISA, and hardware as separate layers. Triton
+  the compiler is not NVIDIA Triton Inference Server; XLA is not a TPU core.
+5. Compare software-stack roles with ROCm and TPU/XLA without implying identical
+  kernels, instruction sets, capabilities, or benchmark results.
+
+Before implementation, check version-specific capability requirements against
+official CUDA Tile/cuTile and Triton documentation. The existing numerical model
+is Ada compute capability 8.9; newer tile APIs must not silently imply support
+on that reference GPU. Use original explanations/diagrams and primary sources,
+not copied video artwork or an unverified transcript.
+
+Acceptance: the same small operation has an independently verified output in
+each supported demonstration; every transition names its abstraction level;
+unsupported backends stay explicit; no precision or programming-language choice
+automatically asserts a particular hardware engine or a performance multiplier.
+
 ## Delivery Gates
 
 Run `npm test`, `npm run typecheck`, and `npm run build` for implementation work.
